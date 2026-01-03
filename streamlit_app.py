@@ -248,7 +248,7 @@ with col1:
     st.metric("✅ Active", f"{active:,}", f"{active_pct}% of total")
 
 with col2:
-    st.metric("�� Monthly Churn", "2.54%", "Stable")
+    st.metric("📊 Monthly Churn", "2.54%", "Stable")
 
 with col3:
     st.metric("⏱️ Avg Lifetime", "340 days", "~11 months")
@@ -276,3 +276,4 @@ st.markdown("""
     <p>Data: Jan 2023 - Jan 2025 | By Pedro Blanco</p>
 </div>
 """, unsafe_allow_html=True)
+git push origin main
