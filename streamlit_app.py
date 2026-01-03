@@ -1,4 +1,3 @@
-cat > streamlit_app.py << 'EOF'
 import streamlit as st
 import pandas as pd
 import sqlite3
@@ -428,4 +427,3 @@ st.markdown("""
     <p>Data: Jan 2023 - Jan 2025 | By Pedro Blanco</p>
 </div>
 """, unsafe_allow_html=True)
-EOF
