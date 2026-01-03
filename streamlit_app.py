@@ -64,18 +64,18 @@ st.markdown("""
     }
 </style>
 """, unsafe_allow_html=True)
-DB_PATH = "/tmp/subscription_analysis.db"
+DB_PATH = "/subscription_analysis.db"
 
 def create_db():
     conn = sqlite3.connect(DB_PATH)
 
-    pd.read_csv("data/subscriptions.csv") \
+    pd.read_csv("/subscriptions.csv") \
         .to_sql("subscriptions", conn, if_exists="replace", index=False)
 
-    pd.read_csv("data/customers.csv") \
+    pd.read_csv("/customers.csv") \
         .to_sql("customers", conn, if_exists="replace", index=False)
 
-    pd.read_csv("data/churn_events.csv") \
+    pd.read_csv("/churn_events.csv") \
         .to_sql("churn_events", conn, if_exists="replace", index=False)
 
     conn.close()
